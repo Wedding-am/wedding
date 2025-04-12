@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Свадьба Артак и Эмма</title>
+  
+  <!-- Шрифты и иконки -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script> <!-- Замените на свой kit от FontAwesome -->
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.2em;
+      color: #b35c79;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .photo {
+      border-radius: 20px;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      transition: transform 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.02);
+    }
+
+    .date, .location {
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    .countdown {
+      font-size: 1.4em;
+      color: #b35c79;
+      margin-top: 20px;
+      font-weight: bold;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .program {
+      margin-top: 40px;
+    }
+
+    .program h2 {
+      color: #b35c79;
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .program-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      animation: fadeInUp 1.6s ease;
+    }
+
+    .program-item i {
+      color: #d75580;
+    }
+
+    .rsvp-button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background-color: #d75580;
+      color: white;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .rsvp-button:hover {
+      background-color: #9d4b68;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    /* Анимации */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.4em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+
+      .program-item {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+    
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(rgba(242, 232, 178, 0.101), #e8d69a4b),
+                url("https://kartinki.pics/uploads/posts/2021-07/1626129163_50-kartinkin-com-p-fon-dlya-priglasitelnikh-na-svadbu-krasivo-53.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    height: 200;
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Артак и Эмма</h1>
+    <h2>Приглашение на нашу свадьбу</h2>
+    <img class="photo" src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-wedding-invitations-with-flowers-png-image_3610093.jpg" alt="wedding" width="350" height="310" />
+  </header>
+
+  <section>
+    <p class="date"><i class="fas fa-calendar-day"></i> 27 июня 2025 года</p>
+    <p class="location"><i class="fas fa-map-marker-alt"></i> Гюмри, Victoria Wedding Hall</p>
+    <p class="countdown" id="countdown">До свадьбы осталось: ...</p>
+  </section>
+
+  <section class="program">
+    <h2>Программа дня</h2>
+    <div class="program-item"><i class="fas fa-user-friends"></i> 14:00 — </div>
+    <div class="program-item"><i class="fas fa-heart"></i> 15:00 — </div>
+    <div class="program-item"><i class="fas fa-utensils"></i> 17:00 — </div>
+    <div class="program-item"><i class="fas fa-music"></i> 19:00 — </div>
+  </section>
+
+  <section>
+    <h2>Будем рады разделить этот день с вами!</h2>
+    <p>Пожалуйста, подтвердите своё присутствие до <strong>1 июня</strong></p>
+    <a href="courses.html" target="_blank">
+      <button class="rsvp-button">Подтвердить участие</button>
+    </a>
+  </section>
+
+  <footer>
+    С любовью, Артак Казарян и Эмма Торосян 💕
+  </footer>
+
+  <script>
+    // Обратный отсчет до свадьбы
+    const countdownElement = document.getElementById("countdown");
+    const weddingDate = new Date("2025-06-27T00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+        countdownElement.textContent = "Сегодня — день свадьбы! 💍";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.textContent = `До свадьбы осталось: ${days}д ${hours}ч ${minutes}м ${seconds}с`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
